@@ -1,0 +1,171 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.container {
+  margin: 0 auto;
+  width: 95%;
+}
+
+/*******************
+  BASE FONT STYLES
+*******************/
+
+h1,
+h3 {
+  font-family: 'Rock Salt', cursive;
+}
+
+h1 {
+  font-size: 40px;
+  float: left;
+}
+
+h2,
+p,
+figcaption,
+li {
+  font-family: 'Poiret One', cursive;
+}
+
+
+a {
+	text-decoration: none;
+}
+
+.hidden {
+  display: none;
+}
+
+/****************************
+GENERAL STLING 
+******************************/
+
+header {
+	text-align: center;
+	margin: 0 auto;
+  max-width: 70%;
+}
+
+nav {
+	margin: 0 auto;
+	padding: 0;
+	float: right;
+}
+
+ul.index {
+	padding-left: 0;
+  text-align: center;
+}
+
+.index ul li  {
+  	padding: 1em;
+}
+
+.index li, 
+li  {
+	list-style: none;
+  display: block;
+}
+
+.index li {
+    border: .1em solid black;
+    display: inline-block;
+    padding: 1em;
+    margin: 1em;
+}
+
+/**************************
+CAROUSEL
+**************************/
+
+.wrapper {
+  margin: 0 auto;
+  width: 550px;
+  height: 500px;
+  position: relative;
+  margin-top: 20%;
+  perspective: 1000px;
+}
+
+.carousel {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 5%;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+
+.block {
+  display: block;
+  position: absolute;
+  top: 20px;
+  background: #000;
+  width: 550px;
+  height: 500px;
+  line-height: 1em;
+  font-size: 2rem;
+  text-align: center;
+  color: black;
+  opacity: 0.95;
+  border-radius: .8em;
+  background: white;
+  border: .1em solid black;
+
+}
+
+.kuti {
+  transform: rotateY(0deg) translateZ(250px);
+}
+.makeba {
+  transform: rotateY(90deg) translateZ(250px);
+}
+.dbanj {
+  transform: rotateY(180deg) translateZ(250px);
+}
+.kidjo {
+  transform: rotateY(270deg) translateZ(250px);
+}
+
+.next, 
+.prev {
+  color: black;
+  position: absolute;
+  bottom: 10vh;
+  padding: 1em 2em;
+  cursor: pointer;
+  background: white;
+  border-radius: .5em;
+  border: .5em solid black;
+}
+.next:hover, 
+.prev:hover { 
+  color: black; 
+  }
+/*
+.next:active, 
+.prev:active {
+  bottom: 10vh;
+  box-shadow: 0 1.1em 0 #999;
+}*/
+
+.next { 
+  right: 5em; 
+}
+.prev { 
+  left: 5em; 
+}
+
+
+

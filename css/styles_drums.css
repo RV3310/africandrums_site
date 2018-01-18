@@ -1,0 +1,162 @@
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.container {
+  margin: 0 auto;
+  width: 95%;
+}
+
+/*******************
+  BASE FONT STYLES
+*******************/
+
+h1,
+h3 {
+  font-family: 'Rock Salt', cursive;
+}
+
+h1 {
+  font-size: 40px;
+  float: left;
+}
+
+h2,
+p {
+  font-family: 'Poiret One', cursive;
+}
+
+
+a {
+	text-decoration: none;
+}
+
+
+/****************************
+GENERAL STLING 
+******************************/
+
+header {
+	text-align: center;
+	margin: 0 auto;
+  max-width: 70%;
+}
+
+#tagline {
+  word-spacing: 10px;
+  margin-top: 5px;
+  line-height: 0;
+}
+
+nav {
+	margin: 0 auto;
+	padding: 0;
+	float: right;
+}
+
+ul.index {
+	padding-left: 0;
+    text-align: center;
+}
+
+.index ul li  {
+  	padding: 20px;
+}
+
+li  {
+	list-style: none;
+	display: inline-block;
+	border: 1px solid black;
+    padding: 20px;
+    margin: 10px;
+}
+
+.instr {
+  text-align: center;
+  padding: 30px 0;
+  position: relative;
+}
+
+/*.map {
+  width: 50%;
+}*/
+
+/**************************
+TEXT POSITIONING
+****************************/
+
+/* Bottom left text */
+.bl {
+    position: absolute;
+    top: 10%;
+    left: 45%;
+    margin: auto;
+    background-color: white;
+}
+
+
+/* Top left text */
+.tl {
+    position: absolute;
+    top: 15%;
+    left: 35%;
+    background-color: white;
+}
+
+/* Top right text */
+.tr {
+    position: absolute;
+    top: 15%;
+    right: 35%;
+    background-color: white;
+}
+
+/* Centered text */
+.cent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: auto;
+    background-color: white;
+}
+
+
+.bl {
+    position: absolute;
+    bottom: 10%;
+    left: 40%;
+    margin: auto;
+    background-color: white;
+}
+
+.bc {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    margin: auto;
+    background-color: white;
+}
+
+/* Bottom right text */
+.br {
+    position: absolute;
+    bottom: 10%;
+    right: 35%;
+    margin: auto;
+    background-color: white;
+}
+
+
+
+
