@@ -34,6 +34,7 @@ h1 {
 h2,
 p,
 figcaption,
+span,
 li {
   font-family: 'Poiret One', cursive;
 }
@@ -94,7 +95,7 @@ CAROUSEL
   width: 550px;
   height: 500px;
   position: relative;
-  margin-top: 20%;
+  margin: 10% auto;
   perspective: 1000px;
 }
 
@@ -102,7 +103,7 @@ CAROUSEL
   height: 100%;
   width: 100%;
   position: absolute;
-  top: 5%;
+  top: 10%;
   transform-style: preserve-3d;
   transition: transform 1s;
 }
@@ -110,7 +111,7 @@ CAROUSEL
 .block {
   display: block;
   position: absolute;
-  top: 20px;
+  top: 1%;
   background: #000;
   width: 550px;
   height: 500px;
@@ -118,8 +119,8 @@ CAROUSEL
   font-size: 2rem;
   text-align: center;
   color: black;
-  opacity: 0.95;
-  border-radius: .8em;
+/*  opacity: 0.95;
+*/  border-radius: .8em;
   background: white;
   border: .1em solid black;
 
@@ -141,30 +142,30 @@ CAROUSEL
 .next, 
 .prev {
   color: black;
-  position: absolute;
-  bottom: 10vh;
-  padding: 1em 2em;
+  position: relative;
+/*  bottom: -40%;
+*/  padding: .1em .2em;
   cursor: pointer;
   background: white;
   border-radius: .5em;
-  border: .5em solid black;
+  border: .2em solid black;
+  width: 6rem;
+  height: 2rem;
+
 }
-.next:hover, 
-.prev:hover { 
-  color: black; 
-  }
-/*
-.next:active, 
-.prev:active {
-  bottom: 10vh;
-  box-shadow: 0 1.1em 0 #999;
-}*/
 
 .next { 
   right: 5em; 
 }
 .prev { 
   left: 5em; 
+
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  align-content: end;
 }
 
 

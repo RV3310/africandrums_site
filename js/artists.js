@@ -1,8 +1,15 @@
+
+$(document).ready(function() {
+
+/*******************************
+CAROUSEL
+*******************************/
+
 var carousel = $(".carousel"),
     currdeg  = 0;
 
 $(".next").on("click", { kuti: "n" }, rotate);
-$(".prev").on("click", { kuit: "p" }, rotate);
+$(".prev").on("click", { kuti: "p" }, rotate);
 
 function rotate(e){
   if(e.data.kuti=="n"){
@@ -20,6 +27,29 @@ function rotate(e){
 }
 
 
+/*********************************************
+SHOW/HIDE
+**********************************************/
+
+function learnMore() {
+  event.preventDefault();
+  $(".learnmore").hide();
+  $(".moretxt, .learnlater").show();
+}
+
+
+function learnLater() {
+  event.preventDefault();
+  $(".learnmore").show();
+  $(".moretxt, .learnlater").hide();
+
+}
+
+$(".learnmore").click(learnMore);
+$(".learnlater").click(learnLater);
+
+
+});
 
 
 
