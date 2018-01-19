@@ -27,7 +27,7 @@ h3 {
 }
 
 h1 {
-  font-size: 40px;
+  font-size: 3rem;
   float: left;
 }
 
@@ -83,7 +83,15 @@ li  {
     border: .1em solid black;
     display: inline-block;
     padding: 1em;
-    margin: 1em;
+    margin: .1em;
+}
+
+.index li:first-child {
+  border-radius: 40px 0 0 40px;
+}
+
+.index li:last-child {
+  border-radius: 0 40px 40px 0;
 }
 
 /**************************
@@ -91,19 +99,20 @@ CAROUSEL
 **************************/
 
 .wrapper {
-  margin: 0 auto;
-  width: 550px;
-  height: 500px;
-  position: relative;
-  margin: 10% auto;
+  display: flex;
+  width: 400px;
+  height: 400px;
+/*  position: relative;
+*/  margin: 10vh auto;
   perspective: 1000px;
 }
 
 .carousel {
+  align-content: center;
   height: 100%;
   width: 100%;
-  position: absolute;
-  top: 10%;
+/*  position: absolute;
+*/  top: 10%;
   transform-style: preserve-3d;
   transition: transform 1s;
 }
@@ -113,17 +122,19 @@ CAROUSEL
   position: absolute;
   top: 1%;
   background: #000;
-  width: 550px;
-  height: 500px;
+  width: 400px;
+  height: 400px;
   line-height: 1em;
   font-size: 2rem;
   text-align: center;
   color: black;
-/*  opacity: 0.95;
-*/  border-radius: .8em;
+  border-radius: .8em;
   background: white;
   border: .1em solid black;
+}
 
+.info {
+  padding-left: 0;
 }
 
 .kuti {
@@ -143,14 +154,14 @@ CAROUSEL
 .prev {
   color: black;
   position: relative;
-/*  bottom: -40%;
-*/  padding: .1em .2em;
+  padding: .1em .2em;
   cursor: pointer;
   background: white;
   border-radius: .5em;
   border: .2em solid black;
   width: 6rem;
   height: 2rem;
+  margin: 10vh 0;
 
 }
 
@@ -165,7 +176,7 @@ CAROUSEL
 .buttons {
   display: flex;
   justify-content: space-between;
-  align-content: end;
+  align-content: flex-end;
 }
 
 
