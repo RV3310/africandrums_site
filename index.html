@@ -8,32 +8,37 @@
 	<!-- Google how to add the 'Source Sans Pro', 'Oswald' and 'Merriweather' Google Fonts to your CSS -->
 	<link href="https://fonts.googleapis.com/css?family=Dancing+Script|Rock+Salt" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="./css/normalize.css">
-  <link rel="stylesheet" href="./css/style_land.css">
+  <link rel="stylesheet" href="./css/index.css">
 </head>
 <body>
-
   <header>
-    <div class="container clearfix">
-      <h1>
-        <a class="logo"> afro_beats</a>
-      </h1>
-      <h2 id="tagline">an african story of the drum</h2>
+    <div class="container">
+      <h1><a class="logo"> afro_beats</a></h1>
+      <i class="fa fa-bars" aria-hidden="true"></i>
+      <nav class="index hidden">
+          <ul>
+            <li><a href="artists.html">artists</a></li>
+            <li><a href="drums.html" class="active">drums</a></li>
+            <li><a href="beats.html">beats</a></li>
+          </ul>
+        </nav>  
     </div>
   </header>
 
-<div class="wrapper">
-    <div class="container">
-      <nav>
-        <ul class="index">
+  <span class="container" id="tagline"> a story of african rythmn and drums</span>
+
+    <!-- <div class="overlay">
+      <nav class="overlay-content">
+        <ul class="index overlay">
           <li>
-            <a href="drums.html"><img src="http://via.placeholder.com/150x150" alt="image of someone playing a drum"></a>
+            <a href="artists.html"><img src="http://via.placeholder.com/150x150" alt="image of someone playing a drum"></a>
             <h3><a class="links" href="artists.html">artists</a></h3>
             <p class="hidden">Click here to learn more about <br> the influencers and innovators <br>in the world of african beats </p>
           </li>
           <li>
-            <a href="drums.html"><img src="http://via.placeholder.com/150x150" alt="snapshot of beatbuilder"></a>
+            <a href="beats.html"><img src="http://via.placeholder.com/150x150" alt="snapshot of beatbuilder"></a>
             <h3><a class="links" href="beats.html">beats</a></h3>
             <p class="hidden"> Click here to play some of the <br>drums and build your own african <br> style drum beat </p>
           </li>
@@ -44,7 +49,8 @@
           </li>
         </ul>
       </nav>
-    </div>
+    </div> -->
+    
     <div class="intro">
       <img src="./images/drumpic.png" alt="drummers playing">
       <p class="first"> <strong>Drums</strong> hold a special place in the history of Africa. <br >
@@ -54,14 +60,13 @@
         Here you can learn about the instruments and artists who have defined african percission over the decades. From Fela Kuti to the Djembe, click, discover and explore.<a class="goback" href="#"> &lt;</a><br> 
       </p>
     </div>
-  </div>
   <footer>
     <div>
-      <span></span>
+      <span>Designed by Danni</span>
     </div>
   </footer>
   <script src="./js/jquery-2.1.3.js"></script>
-  <script src="./js/main.js"></script>
+  <script src="./js/index.js"></script>
 
 </body>
 </html>

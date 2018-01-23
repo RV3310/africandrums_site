@@ -1,6 +1,11 @@
 
 $(document).ready(function() {
 
+$(".fa").on("click", function() { 
+  event.preventDefault(); 
+  $("nav").toggle(); 
+});
+
 /*******************************
 CAROUSEL
 *******************************/
@@ -33,15 +38,14 @@ SHOW/HIDE
 
 function learnMore() {
   event.preventDefault();
-  $(".learnmore").hide();
-  $(".moretxt, .learnlater").show();
+  $(this).hide();
+  $(this).next(".moretxt, .learnlater").show();
 }
-
 
 function learnLater() {
   event.preventDefault();
-  $(".learnmore").show();
-  $(".moretxt, .learnlater").hide();
+  $(this).parent().siblings(".learnmore").show();
+  $(this).parent(".moretxt, .learnlater").hide();
 
 }
 

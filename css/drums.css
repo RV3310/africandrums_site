@@ -18,6 +18,9 @@
   width: 95%;
 }
 
+.hidden {
+  display: none;
+}
 /*******************
   BASE FONT STYLES
 *******************/
@@ -28,13 +31,20 @@ h3 {
 }
 
 h1 {
-  font-size: 40px;
-  float: left;
-}
+  font-size: 2.5rem;
+  }
 
 h2,
 p {
   font-family: 'Poiret One', cursive;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+h3 {
+  font-size: 1rem;
 }
 
 
@@ -46,96 +56,119 @@ a {
 /****************************
 GENERAL STLING 
 ******************************/
+header > div {
+  display: flex;
+  justify-content: space-between;
+}
 
-header {
-	text-align: center;
-	margin: 0 auto;
-  max-width: 70%;
+.index li {
+  border: .1em solid black;
+  padding: 1em;
+  margin: .1em;
 }
 
 #tagline {
-  word-spacing: 10px;
-  margin-top: 5px;
+  word-spacing: 0.625rem;
+  margin-top: 0.32rem;
   line-height: 0;
-}
-
-nav {
-	margin: 0 auto;
-	padding: 0;
-	float: right;
 }
 
 ul.index {
 	padding-left: 0;
-    text-align: center;
+  text-align: center;
 }
 
-.index ul li  {
-  	padding: 20px;
-}
-
+nav ul li,
 li  {
 	list-style: none;
 	display: inline-block;
-	border: 1px solid black;
-    padding: 20px;
-    margin: 10px;
+	border: 0.0625rem solid black;
+  padding: .5rem;
+  margin: 0.6rem;
+}
+
+.index li:first-child {
+  border-radius: 10px 0 0 10px;
+}
+
+.index li:last-child {
+  border-radius: 0 10px 10px 0;
+}
+
+.intro {
+  text-align: center;
+  font-size: 2rem;
+  max-width: 50%;
+  margin: 0 auto;
+}
+
+.wrapper {
+  border: 2px solid black;
+  border-radius: 10px;
+  max-width: 500px;
+  max-height: 800px;
+  margin-bottom: 10vh;
+}
+
+.map {
+  display: block;
+  margin: auto;
+  padding: 10px;
+  max-width: 100%;
 }
 
 .instr {
-  text-align: center;
-  padding: 30px 0;
   position: relative;
+  text-align: center;
+  padding: 1.8rem 0;
+  display: flex;
 }
-
-/*.map {
-  width: 50%;
-}*/
 
 /**************************
 TEXT POSITIONING
 ****************************/
 
 /* Bottom left text */
-.bl {
+.tl {
     position: absolute;
-    top: 10%;
-    left: 45%;
+    top: 25%;
+    left: 5%;
     margin: auto;
     background-color: white;
 }
 
 
 /* Top left text */
-.tl {
+.tc {
     position: absolute;
-    top: 15%;
-    left: 35%;
+    top: 5%;
+    right: 40%;
     background-color: white;
 }
 
 /* Top right text */
 .tr {
     position: absolute;
-    top: 15%;
-    right: 35%;
+    top: 25%;
+    right: 5%;
     background-color: white;
 }
 
 /* Centered text */
 .cent {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    margin: auto;
+    top: 40%;
+    left: 40%;
+    max-width: 40%;
+    margin: 0 auto;
     background-color: white;
 }
 
 
 .bl {
     position: absolute;
-    bottom: 10%;
-    left: 40%;
+    bottom: 15%;
+    left: 25%;
     margin: auto;
     background-color: white;
 }
@@ -151,8 +184,8 @@ TEXT POSITIONING
 /* Bottom right text */
 .br {
     position: absolute;
-    bottom: 10%;
-    right: 35%;
+    bottom: 1%;
+    right: 15%;
     margin: auto;
     background-color: white;
 }

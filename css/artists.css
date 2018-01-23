@@ -21,78 +21,34 @@
   BASE FONT STYLES
 *******************/
 
-h1,
-h3 {
-  font-family: 'Rock Salt', cursive;
+body {
+   font-family: 'Poiret One', cursive;
+   font-size: 1rem;
 }
 
-h1 {
-  font-size: 3rem;
-  float: left;
+h2 {
+  font-size: 1rem;
 }
 
-h2,
+ul li ,
 p,
-figcaption,
-span,
+.learnmore {
+  font-size: 1rem;
+}
+
+ul li {
+  border: none;
+}
+
 li {
-  font-family: 'Poiret One', cursive;
+  margin: 0;
+  padding: 0;
 }
 
-
-a {
-	text-decoration: none;
+.info {
+  margin: 0;
 }
 
-.hidden {
-  display: none;
-}
-
-/****************************
-GENERAL STLING 
-******************************/
-
-header {
-	text-align: center;
-	margin: 0 auto;
-  max-width: 70%;
-}
-
-nav {
-	margin: 0 auto;
-	padding: 0;
-	float: right;
-}
-
-ul.index {
-	padding-left: 0;
-  text-align: center;
-}
-
-.index ul li  {
-  	padding: 1em;
-}
-
-.index li, 
-li  {
-	list-style: none;
-  display: block;
-}
-
-.index li {
-    border: .1em solid black;
-    display: inline-block;
-    padding: 1em;
-    margin: .1em;
-}
-
-.index li:first-child {
-  border-radius: 40px 0 0 40px;
-}
-
-.index li:last-child {
-  border-radius: 0 40px 40px 0;
-}
 
 /**************************
 CAROUSEL
@@ -102,8 +58,7 @@ CAROUSEL
   display: flex;
   width: 400px;
   height: 400px;
-/*  position: relative;
-*/  margin: 10vh auto;
+  margin: 10vh auto;
   perspective: 1000px;
 }
 
@@ -111,13 +66,13 @@ CAROUSEL
   align-content: center;
   height: 100%;
   width: 100%;
-/*  position: absolute;
-*/  top: 10%;
+  top: 10%;
   transform-style: preserve-3d;
   transition: transform 1s;
 }
 
 .block {
+  overflow-y: auto;
   display: block;
   position: absolute;
   top: 1%;
@@ -133,6 +88,10 @@ CAROUSEL
   border: .1em solid black;
 }
 
+.photo {
+  margin-top: 2%;
+  padding: 5%;
+}
 .info {
   padding-left: 0;
 }
@@ -154,7 +113,6 @@ CAROUSEL
 .prev {
   color: black;
   position: relative;
-  padding: .1em .2em;
   cursor: pointer;
   background: white;
   border-radius: .5em;
@@ -162,6 +120,7 @@ CAROUSEL
   width: 6rem;
   height: 2rem;
   margin: 10vh 0;
+  font-size: 1.5rem;
 
 }
 

@@ -1,44 +1,55 @@
-// LANDING PAGE 
 
 $(document).ready(function() {
 
 // variables
 var ww = $(window).width();
 
-// learnMore function
+	// Responsive Nav Bar
+
+$(".fa").on("click", function() { 
+	event.preventDefault(); 
+	$("nav").toggle(); 
+});
+
+$(window).resize(function() { 
+	if ($(window).width() < 850) { 
+		$("nav").hide(); 
+	} else { $("nav").show(); 
+} 
+})
+
+// OVERLAY FUNCTIONS
+
+
+// SHOW/HIDE FUNCTIONS
+
 function learnMore() {
 	event.preventDefault();
 	$(".first").hide();
 	$(".second").show();
 }
 
-
 function goBack() {
 	event.preventDefault();
 	$(".first").show();
 	$(".second").hide();
-
 }
 
 $(".goforward").click(learnMore);
 $(".goback").click(goBack);
 
-// nav dropdown on hover
-
-$(".links").hover(navDrop);
-
-function navDrop() {
-	event.preventDefault();
-	if (ww<500); 
-		$(this).parents().siblings("p").show();
-}
-
 });
 
-// target - learn more
-// when clicked hide intro first and show intro second
+// DRUMS PAGE
+
+// SLIDE ANIMATION
 
 
+
+
+// ARTISTIS PAGE
+
+// 3D CAROUSEL
 
 
 
