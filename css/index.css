@@ -101,7 +101,90 @@ li  {
   margin: 0.6rem;
 }
 
+.menu {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  height: 46px;
+  width: 46px;
+}
+
+.menu-link {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+}
+
+.hamburger-icon {
+  position: absolute;
+  width: 20px;
+  height: 14px;
+  margin: auto;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 1px;
+}
+
+.hamburger-bar {
+  background-color: #000;
+  height: 2px;
+  width: 100%;
+  border-radius: 2px;
+  position: absolute;
+  left: 0;
+  transition: all 0.25s ease-in-out;
+}
+
+.hamburger-bar-2 {
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.hamburger-bar-3 {
+  bottom: 0;
+}
+
+.menu.open .hamburger-bar-1 {
+  transform: translateY(7px) translateY(-50%) rotate(45deg);
+}
+
+.menu.open .hamburger-bar-2 {
+  opacity: 0;
+}
+
+.menu.open .hamburger-bar-3 {
+  transform: translateY(-7px) translateY(50%) rotate(-45deg);
+}
+
+
 /*NAV OVERLAY*/
+
+.overlay {
+  background: rgba(240,231,253,1);
+  color: #fff;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  text-align: center;
+  transition: opacity 0.2s ease-in-out;
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
 
 /******************************
 BODY STYLING
@@ -128,7 +211,6 @@ BODY
 
 .intro {
   font-size: 1.3rem;
-  width: 70vw;
   text-align: center;
   margin: 0 auto;
 }
@@ -172,17 +254,21 @@ MEDIA QUERY - LAPTOP
 
 @media (min-width: 850px) {
 
+  a:hover {
+    font-weight: 900;
+  }
+
   header nav li{
     display: inline-block;
     list-style: none;
  }
 
- .fa {
-  display: none;
- }
-
  header nav {
   margin-right: 5%;
+ }
+
+  .menu {
+  display: none;
  }
 
 ul .index {

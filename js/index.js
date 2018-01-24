@@ -6,20 +6,28 @@ var ww = $(window).width();
 
 	// Responsive Nav Bar
 
-$(".fa").on("click", function() { 
-	event.preventDefault(); 
-	$("nav").toggle(); 
-});
+// $(".fa").on("click", function() { 
+// 	event.preventDefault(); 
+// 	$("nav").toggle(); 
+// });
 
 $(window).resize(function() { 
 	if ($(window).width() < 850) { 
-		$("nav").hide(); 
-	} else { $("nav").show(); 
+		$(".index_1").hide(); 
+	} else { 
+		$(".index_1").show();
 } 
 })
 
-// OVERLAY FUNCTIONS
+// OVERLAY 
 
+  
+  $(".menu-link").click(function(event) {
+    event.preventDefault();
+    $(".overlay").toggleClass("open");
+    $(".menu").toggleClass("open");
+
+  });
 
 // SHOW/HIDE FUNCTIONS
 
