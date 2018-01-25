@@ -25,21 +25,24 @@
 /**********************
 GENERAL BODY STLES
 **********************/
-
-/*body {
-  background-color: rgba(192, 192, 192, 0.1);
+/*
+body {
+   font-family: 'Poiret One', cursive;
+   font-size: 1rem;
 }*/
+
 /*******************
   BASE FONT STYLES
 *******************/
 
 h1,
-h3 {
+h3,
+figcaption {
   font-family: 'Rock Salt', cursive;
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 2.2rem;
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 10%;
@@ -49,6 +52,7 @@ h1 {
 
 h2,
 span,
+.block li,
 p {
   font-family: 'Poiret One', cursive;
 }
@@ -59,12 +63,20 @@ h2 {
 
 h3,
 p {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   color: rgb(172,47,158);
+}
+
+figcaption {
+  font-size: 1.4rem;
 }
 
 p {
   font-weight: 900;
+}
+
+.moretxt {
+  font-size: 1rem;
 }
 
 a {
@@ -194,7 +206,7 @@ li  {
   padding-bottom: 0;
 }
 
-li > p{
+li > p {
     font-size: .8rem;
     color: rgb(171,3,143);
     margin-top: 0;
@@ -263,11 +275,250 @@ footer {
   color: white;
 }
 
+/**********************************
+ARTISTS PAGE
+***********************************/
+
+/**************************
+CAROUSEL
+**************************/
+
+.wrapper {
+  display: flex;
+  width: 250px;
+  height: 400px;
+  margin: 25% auto;
+  perspective: 1000px;
+}
+
+.carousel {
+  align-content: center;
+  height: 100%;
+  width: 100%;
+  top: 10%;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+
+
+.block {
+  overflow-y: auto;
+  display: block;
+  position: absolute;
+  top: 1%;
+  background: #000;
+  width: 250px;
+  height: 400px;
+  text-align: center;
+  color: black;
+  border-radius: .8em 0 0 .8em;
+  background: white;
+  border: .1em solid black;
+}
+
+/*.frame {
+  width: 260px;
+  height: 410px;
+  background: transparent;
+}*/
+
+
+.block li,
+.learnmore,
+.learnlater {
+  font-size: 1rem;
+}
+
+.block li {
+  border: none;
+  margin: .5rem;
+  padding: 0;
+}
+
+.photo {
+  margin-top: 2%;
+  padding: 5%;
+}
+.info {
+  padding-left: 0;
+}
+
+.kuti {
+  transform: rotateY(0deg) translateZ(250px);
+}
+.makeba {
+  transform: rotateY(90deg) translateZ(250px);
+}
+.dbanj {
+  transform: rotateY(180deg) translateZ(250px);
+}
+.kidjo {
+  transform: rotateY(270deg) translateZ(250px);
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  align-content: flex-end;
+  text-align: center;
+  margin: 4% 0 3%;
+
+}
+
+.next, 
+.prev {
+  color: black;
+  position: relative;
+  cursor: pointer;
+  background: white;
+  border-radius: .5em;
+  border: .1em solid indigo;
+  font-size: 1.3rem;
+  padding: .5em;
+
+}
+
+.next { 
+  right: 5%;
+  width: 6rem; 
+}
+.prev { 
+  left: 5%; 
+
+}
+
+.block::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: #eee;
+  box-shadow: 0 0 1px 1px #bbb, inset 0 0 7px rgba(0,0,0,0.3)
+}
+
+.block::-webkit-scrollbar {
+  width: 5px;
+  height: 70px;
+  background-color: rgb(172,47,158);
+}
+
+.block::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: linear-gradient(left, #96A6BF, #63738C);
+  box-shadow: inset 0 0 1px 1px #5C6670;
+}
+
+/***************************
+DRUMS PAGE
+****************************/
+
+.intro {
+  text-align: center;
+  font-size: 2rem;
+  margin: 0 5%;
+}
+
+.wrapper_2 {
+  border: 2px solid black;
+  border-radius: 10px;
+  max-width: 500px;
+  max-height: 800px;
+  margin-bottom: 10vh;
+}
+
+.wrapper_2 a{
+  font-size: 1.1rem;
+
+}
+
+.descrip a {
+  font-size: 1.4rem;
+}
+
+.map {
+  display: block;
+  margin: auto;
+  padding: 10px;
+  max-width: 100%;
+}
+
+.instr {
+  position: relative;
+  text-align: center;
+  padding: 1.8rem 0;
+  display: flex;
+}
+
+/*test positoning*/
+
+/**************************
+TEXT POSITIONING
+****************************/
+
+/* Bottom left text */
+.tl {
+    position: absolute;
+    top: 25%;
+    left: 5%;
+    margin: auto;
+    background-color: white;
+}
+
+
+/* Top left text */
+.tc {
+    position: absolute;
+    top: 5%;
+    right: 40%;
+    background-color: white;
+}
+
+/* Top right text */
+.tr {
+    position: absolute;
+    top: 25%;
+    right: 5%;
+    background-color: white;
+}
+
+/* Centered text */
+.cent {
+    position: absolute;
+    top: 37%;
+    left: 40%;
+    max-width: 40%;
+    margin: 0 auto;
+    background-color: white;
+}
+
+
+.bl {
+    position: absolute;
+    bottom: 10%;
+    left: 23%;
+    margin: auto;
+    background-color: white;
+}
+
+.bc {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    margin: auto;
+    background-color: white;
+}
+
+/* Bottom right text */
+.br {
+    position: absolute;
+    bottom: 1%;
+    right: 15%;
+    margin: auto;
+    background-color: white;
+}
+
 /*******************************
 MEDIA QUERY - IPAD
 ********************************/
 
-@media (min-width: 600px) {
+/*@media (min-width: 600px) {
   html {
     font-size: 1.5rem;
   }
@@ -276,14 +527,14 @@ MEDIA QUERY - IPAD
   font-size: .8rem;
   padding: 0.35rem;
    }
-}
+}*/
 
 /********************************
 MEDIA QUERY - LAPTOP
 ********************************/
 
 
-@media (min-width: 850px) {
+/*@media (min-width: 850px) {
 
   a:hover {
     font-weight: 900;
@@ -324,5 +575,5 @@ img {
   margin: 0 auto;
 }
 
-}
+}*/
 

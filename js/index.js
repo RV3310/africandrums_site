@@ -105,11 +105,6 @@ function rotate(e){
 
 
 
-// function playAudio() {
-//      var x = $("#d_drm")[0];
-//      x.play();
-// }
-
 // // When box is clicked on add "is_active" class
 
 // //check which boxes are active

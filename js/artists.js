@@ -1,11 +1,5 @@
 
 $(document).ready(function() {
-
-$(".fa").on("click", function() { 
-  event.preventDefault(); 
-  $("nav").toggle(); 
-});
-
 /*******************************
 CAROUSEL
 *******************************/
@@ -13,7 +7,8 @@ CAROUSEL
 var carousel = $(".carousel"),
     currdeg  = 0;
 
-$(".next").on("click", { kuti: "n" }, rotate);
+$(".next").on("click", { 
+  kuti: "n" }, rotate);
 $(".prev").on("click", { kuti: "p" }, rotate);
 
 function rotate(e){
