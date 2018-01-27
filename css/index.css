@@ -104,20 +104,17 @@ HEADER STLING
 header > div {
   display: flex;
   justify-content: space-between;
-}
-
-header {
-  padding-top: 3%;
-}
-
-header, 
-header .container {
   position: fixed;
   top: 0;
   padding-top: 15px;
   z-index: 100;
   background-color: white;
-} 
+  width: 100%;
+}
+
+.container {
+  max-width: 1000px;
+}
 
 
 .index li {
@@ -143,7 +140,7 @@ li  {
 
 .menu {
   position: absolute;
-  top: 2.7%;
+  top: 1.6rem;
   right:4%;
   height: 10%;
   width: 10%;
@@ -465,7 +462,7 @@ DRUMS PAGE
   border-radius: 10px;
   max-width: 500px;
   max-height: 800px;
-  margin-bottom: 10vh;
+  margin-bottom: 50px;
 }
 
 .wrapper_2 a{
@@ -571,7 +568,7 @@ MEDIA QUERY - IPAD
 
   .menu {
   position: absolute;
-  top: 6%;
+  top: 2.5rem;
   right:2%;
   }
 
@@ -610,6 +607,7 @@ MEDIA QUERY - LAPTOP
 
   .container {
     max-width: 1000px;
+    margin: 0 auto;
   }
 
   .menu {
@@ -641,6 +639,10 @@ MEDIA QUERY - LAPTOP
       margin-top: 0;
       font-size: 1.5rem;
     }
+  }
+
+  .wrapper_2 {
+    margin-bottom: 40px;
   }
 
 }
