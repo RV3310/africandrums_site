@@ -12,7 +12,7 @@ var ww = $(window).width();
 // });
 
 $(window).resize(function() { 
-	if ($(window).width() < 850) { 
+	if ($(window).width() < 880) { 
 		$(".index_1").hide(); 
 	} else { 
 		$(".index_1").show();
