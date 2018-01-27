@@ -110,6 +110,16 @@ header {
   padding-top: 3%;
 }
 
+header, 
+header .container {
+  position: fixed;
+  top: 0;
+  padding-top: 15px;
+  z-index: 100;
+  background-color: white;
+} 
+
+
 .index li {
   border: .1em solid indigo;
   padding: 1em;
@@ -190,6 +200,12 @@ li  {
   transform: translateY(-7px) translateY(50%) rotate(-45deg);
 }
 
+.main_cont {
+  position: relative;
+  top: 100px;
+}
+
+
 
 /*NAV OVERLAY*/
 
@@ -238,14 +254,14 @@ li > h3 {
 BODY STYLING
 ******************************/
 
-#tagline {
+.tagline {
   word-spacing: 0.3rem;
-  margin: 0.5rem;
-  text-align: center;
-  font-size: 1.2rem;
-  display: block;
-  line-height: 2;
+  margin: 1em auto;
+/*  display: block;
+*/line-height: .8;
   font-weight: 900;
+  font-size: 1.2rem;
+  text-align: center;
 }
 
 
@@ -619,6 +635,12 @@ MEDIA QUERY - LAPTOP
 
   .buttons {
     margin: 1% 20% 4%;
+  }
+
+  .container.tagline {
+      margin-top: 0;
+      font-size: 1.5rem;
+    }
   }
 
 }

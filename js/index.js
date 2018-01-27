@@ -24,6 +24,7 @@ $(window).resize(function() {
     event.preventDefault();
     $(".overlay").toggleClass("open");
     $(".menu").toggleClass("open");
+    $("header").hide();
 
   });
 
