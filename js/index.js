@@ -24,7 +24,7 @@ $(window).resize(function() {
     event.preventDefault();
     $(".overlay").toggleClass("open");
     $(".menu").toggleClass("open");
-    $(".logo").toggleClass("hidden");
+    $("h1").toggleClass("hidden");
   });
 
 // SHOW/HIDE FUNCTIONS
@@ -104,19 +104,48 @@ function rotate(e){
 
 // click on tab
 
-$(".tab").click(showHide);
+$(".shakers").click(showHideSK);
+$(".bells").click(showHideBL);
+$(".xylo").click(showHideXY);
+$(".drums").click(showHideDM);
+$(".piano").click(showHideTP);
+
 $(".return").click(hideShow);
 
-function showHide() {
+function showHideSK() {
   event.preventDefault();
   $(".instr").hide();
   $(".box.tl_txt").show();
 }
 
+function showHideDM() {
+  event.preventDefault();
+  $(".instr").hide();
+  $(".box.bl_txt").show();
+}
+
+function showHideXY() {
+  event.preventDefault();
+  $(".instr").hide();
+  $(".box.tc_txt").show();
+}
+
+function showHideBL() {
+  event.preventDefault();
+  $(".instr").hide();
+  $(".box.tr_txt").show();
+}
+
+function showHideTP() {
+  event.preventDefault();
+  $(".instr").hide();
+  $(".box.br_txt").show();
+}
+
 function hideShow() {
    event.preventDefault();
   $(".instr").show();
-  $(".box.tl_txt").hide();
+  $(".box").hide();
 }
 
 
