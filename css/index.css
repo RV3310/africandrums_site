@@ -32,8 +32,8 @@ COLORS
 }
 
 .container {
+  max-width: 1000px;
   margin: 0 auto;
-  width: 95vw;
 }
 
 .hidden {
@@ -97,10 +97,19 @@ a {
   text-decoration: none;
 }
 
+li > p  {
+  font-size: 1rem;
+}
+
+li > h3 {
+  font-size: 1rem;
+  margin-top: 0;
+}
 
 /****************************
 HEADER STLING 
 ******************************/
+
 header > div {
   display: flex;
   justify-content: space-between;
@@ -110,10 +119,6 @@ header > div {
   z-index: 100;
   background-color: white;
   width: 100%;
-}
-
-.container {
-  max-width: 1000px;
 }
 
 
@@ -234,14 +239,13 @@ li  {
 }
 
 li > p {
-    font-size: .8rem;
     color: rgb(171,3,143);
     margin-top: 0;
 }
 
-li > h3 {
-  font-size: 1rem;
-  margin-top: 0;
+
+.links  {
+    margin: .3em;
 }
 
 
@@ -262,10 +266,6 @@ BODY STYLING
 }
 
 
-.links {
-    margin: .3em;
-}
-
 .index li:first-child {
   border-radius: 10px 10px 0 0;
 }
@@ -279,10 +279,12 @@ BODY
 *******************************/
 
 
-.intro {
+.intro p {
   font-size: 1.3rem;
   text-align: center;
   margin: 0 auto;
+  margin-bottom: 30px;
+  margin-top: -15px;
 }
 
 .intro img {
@@ -457,8 +459,9 @@ DRUMS PAGE
   max-width: 600px
 }
 
-.wrapper_2 {
-  border: 2px solid black;
+.wrapper_2,
+.box {
+  border: 2px solid indigo;
   border-radius: 10px;
   max-width: 500px;
   max-height: 800px;
@@ -467,7 +470,6 @@ DRUMS PAGE
 
 .wrapper_2 a{
   font-size: 1.1rem;
-
 }
 
 .descrip a {
@@ -481,11 +483,21 @@ DRUMS PAGE
   max-width: 100%;
 }
 
-.instr {
+.instr,
+.box {
   position: relative;
   text-align: center;
   padding: 1.8rem 0;
   display: flex;
+}
+
+.box {
+  padding: 100px;
+  margin: 0 auto;
+  height: 600px;
+  width: 600px;
+  margin-bottom: 20px;
+  display: none;
 }
 
 /*test positoning*/
@@ -509,6 +521,7 @@ TEXT POSITIONING
     position: absolute;
     top: 5%;
     right: 40%;
+    margin: auto;
     background-color: white;
 }
 
@@ -523,8 +536,8 @@ TEXT POSITIONING
 /* Centered text */
 .cent {
     position: absolute;
-    top: 37%;
-    left: 40%;
+    top: 40%;
+    left: 35%;
     max-width: 40%;
     margin: 0 auto;
     background-color: white;
@@ -533,10 +546,17 @@ TEXT POSITIONING
 
 .bl {
     position: absolute;
-    bottom: 10%;
-    left: 23%;
+    bottom: 5%;
+    left: 20%;
     margin: auto;
     background-color: white;
+}
+
+i .flaticon-drum {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  font-size: 40px;
 }
 
 .bc {
@@ -544,7 +564,6 @@ TEXT POSITIONING
     bottom: 5%;
     left: 50%;
     margin: auto;
-    background-color: white;
 }
 
 /* Bottom right text */
@@ -586,7 +605,13 @@ MEDIA QUERY - IPAD
     max-width: 600px;
   }
 
-
+  .intro  p {
+  margin: 15px auto 30px;
+}
+  .bl {
+    bottom: 10%;
+    left: 25%;
+  }
   
 }
 
@@ -595,20 +620,6 @@ MEDIA QUERY - LAPTOP
 ********************************/
 
 @media (min-width: 895px) {
-/*
-  html {
-    background: radial-gradient( ellipse farthest-corner, white 60%, rgba(88, 11, 28, .5));
-  }*/
-
-  body {
-    margin: 0 auto;
-    background-color: white;
-  }
-
-  .container {
-    max-width: 1000px;
-    margin: 0 auto;
-  }
 
   .menu {
     display: none;
@@ -639,7 +650,7 @@ MEDIA QUERY - LAPTOP
       margin-top: 0;
       font-size: 1.5rem;
     }
-  }
+
 
   .wrapper_2 {
     margin-bottom: 40px;

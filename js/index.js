@@ -24,7 +24,7 @@ $(window).resize(function() {
     event.preventDefault();
     $(".overlay").toggleClass("open");
     $(".menu").toggleClass("open");
-    $(".logo").toggleClass("open");
+    $(".logo").toggleClass("hidden");
   });
 
 // SHOW/HIDE FUNCTIONS
@@ -75,8 +75,14 @@ $(".learnlater").click(learnLater);
 var carousel = $(".carousel"),
     currdeg  = 0;
 
-$(".next").on("click", { kuti: "n" }, rotate);
-$(".prev").on("click", { kuti: "p" }, rotate);
+$(".next").on("click", { 
+  kuti: "n" 
+  }, 
+  rotate);
+$(".prev").on("click", { 
+  kuti: "p" 
+  }, 
+  rotate);
 
 function rotate(e){
   if(e.data.kuti=="n"){
@@ -95,6 +101,30 @@ function rotate(e){
 
 
 // DRUMS PAGE
+
+// click on tab
+
+$(".tab").click(showHide);
+$(".return").click(hideShow);
+
+function showHide() {
+  event.preventDefault();
+  $(".instr").hide();
+  $(".box.tl_txt").show();
+}
+
+function hideShow() {
+   event.preventDefault();
+  $(".instr").show();
+  $(".box.tl_txt").hide();
+}
+
+
+
+
+
+// hide instr
+// show paragraph
 
 // SLIDE ANIMATION
 
