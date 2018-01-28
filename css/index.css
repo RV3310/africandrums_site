@@ -43,12 +43,26 @@ COLORS
 /**********************
 GENERAL BODY STLES
 **********************/
-/*
-body {
-   font-family: 'Poiret One', cursive;
-   font-size: 1rem;
-}*/
 
+@keyframes shake {
+  10%, 90% {
+     transform: rotate(5deg);
+  }
+  
+  20%, 80% {
+*/    transform: rotate(0deg);
+  }
+
+  30%, 50%, 70% {
+     transform: rotate(-5deg);
+
+  }
+
+  40%, 60% {
+      transform: rotate(0deg);
+
+  }
+}
 /*******************
   BASE FONT STYLES
 *******************/
@@ -492,7 +506,8 @@ DRUMS PAGE
 }
 
 .box {
-  padding: 100px;
+  padding: 40px 10px 20px;
+
   margin: 0 auto;
   height: 600px;
   width: 600px;
@@ -519,7 +534,7 @@ TEXT POSITIONING
 /* Top left text */
 .tc {
     position: absolute;
-    top: 5%;
+    top: 10%;
     right: 40%;
     margin: auto;
     background-color: white;
@@ -552,12 +567,6 @@ TEXT POSITIONING
     background-color: white;
 }
 
-i .flaticon-drum {
-  display: inline;
-  margin: 0;
-  padding: 0;
-  font-size: 40px;
-}
 
 .bc {
     position: absolute;
@@ -573,6 +582,27 @@ i .flaticon-drum {
     right: 15%;
     margin: auto;
     background-color: white;
+}
+
+.icon {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    color: indigo;
+    transform: translateX(-50%);
+    animation: shake;
+    animation-duration: 2s;
+    animation-iteration-count: 3;
+}
+
+.icon::before {
+  margin: 0;
+  font-size: 40px;
+}
+
+iframe ~ p {
+  max-width: 70%;
+  margin: 0 auto;
 }
 
 /*******************************
@@ -612,6 +642,17 @@ MEDIA QUERY - IPAD
     bottom: 10%;
     left: 25%;
   }
+
+
+.icon::before {
+  font-size: 60px;
+}
+
+iframe {
+  max-width: 300px;
+  max-height: 215px; 
+
+}
   
 }
 
