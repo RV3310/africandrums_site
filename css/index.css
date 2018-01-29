@@ -69,19 +69,22 @@ GENERAL BODY STLES
     top: 0;
     opacity: 0;
   }
-  25% {
-    top: 25px;
+  20% {
+    top: 50px;
     opacity: 1;
   }
-  50% {
+  40% {
     top: 100px;
   }
-  75% {
+  60% {
     top: 125px;
   }
-  100% {
-    top: 50px;
+  80% {
+    top: 100px;
   }
+  100% {
+    top: 125px;
+    }
 }
 /*******************
   BASE FONT STYLES
@@ -320,25 +323,27 @@ BODY
 
 .fp {
   position: absolute;
+  top: 125px;
   animation: fall;
   animation-duration: 2s;
   animation-iteration-count: 2;
 }
 
-.1 {
+.flaticon-maracas {
   animation-delay: 0s;
+  color: indigo;
 }
 
-.2 {
-  animation-delay: 3s;
+.flaticon-xylophone {
+  animation-delay: 2s;
 }
 
-.3 {
+.flaticon-music-4 {
+  animation-delay: 4s;
+}
+
+.flaticon-drum {
   animation-delay: 6s;
-}
-
-.4 {
-  animation-delay: 9s;
 }
 
 .fp::before {
