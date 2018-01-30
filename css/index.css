@@ -32,9 +32,16 @@ COLORS
 }
 
 .container {
-  max-width: 1000px;
+  width: 1000px;
   margin: 0 auto;
+  max-width: 95%;
 }
+
+.images.container {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 
 .hidden {
   display: none;
@@ -86,6 +93,24 @@ GENERAL BODY STLES
     top: 125px;
     }
 }
+
+@keyframes bounce {
+  0%, 100%, 20%, 50%, 80% {
+    -webkit-transform: translateY(0);
+    -ms-transform:     translateY(0);
+    transform:         translateY(0)
+  }
+  40% {
+    -webkit-transform: translateY(-30px);
+    -ms-transform:     translateY(-30px);
+    transform:         translateY(-30px)
+  }
+  60% {
+    -webkit-transform: translateY(-15px);
+    -ms-transform:     translateY(-15px);
+    transform:         translateY(-15px)
+  }
+}
 /*******************
   BASE FONT STYLES
 *******************/
@@ -100,7 +125,6 @@ h1 {
   font-size: 2.2rem;
   margin-top: 0;
   margin-bottom: 0;
-  padding-left: 10%;
   align-self: flex-start;
   color: indigo;
   }
@@ -147,15 +171,17 @@ li > h3 {
 HEADER STLING 
 ******************************/
 
-header > div {
-  display: flex;
-  justify-content: space-between;
+header {
   position: fixed;
   top: 0;
-  padding-top: 15px;
   z-index: 100;
   background-color: white;
   width: 100%;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
 }
 
 
@@ -170,6 +196,10 @@ ul.index {
   padding-left: 0;
   text-align: center;
 }
+
+.index_1 {
+    display: none;
+  }
 
 nav ul li,
 li  {
@@ -285,6 +315,21 @@ li > p {
     margin: .3em;
 }
 
+.index_1 a,
+.logo{
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    display: inline-block;
+}
+
+.index_1 a:hover,
+.logo:hover {
+  cursor: pointer;
+  animation-name: bounce;
+}
+
 
 /******************************
 BODY STYLING
@@ -292,12 +337,16 @@ BODY STYLING
 
 .tagline {
   word-spacing: 0.3rem;
-  margin: 1em auto;
-/*  display: block;
-*/line-height: .8;
+  margin: 0 auto;
+  line-height: 0.8;
   font-weight: 900;
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   text-align: center;
+}
+
+.logo {
+  display: inline-block;
+  margin: 15px 0;
 }
 
 
@@ -312,13 +361,19 @@ BODY STYLING
 /*******************************
 BODY
 *******************************/
+.images.container {
+  padding-right: 50px;
+}
+
 .images {
   display: flex;
   justify-content: space-around;
   position: relative;
-  margin: 100px auto;
+  margin: 50px auto;
   margin-bottom: 200px;
   margin-left: 0;
+  z-index: -2
+  padding-right: 50px;
  }
 
 .fp {
@@ -327,6 +382,10 @@ BODY
   animation: fall;
   animation-duration: 2s;
   animation-iteration-count: 2;
+  height: 40px;
+  width: 70px;
+  text-align: center;
+  box-shadow:0 3px 4px rgba(0, 0, 8, 0.3), 0 0 40px rgba(0, 0, 30, 0.1) inset;
 }
 
 .flaticon-maracas {
@@ -336,14 +395,18 @@ BODY
 
 .flaticon-xylophone {
   animation-delay: 2s;
+  color:  #000080;
 }
 
 .flaticon-music-4 {
   animation-delay: 4s;
+  color: #800000;
 }
 
 .flaticon-drum {
   animation-delay: 6s;
+  color: #997300;
+  padd
 }
 
 .fp::before {
@@ -351,13 +414,27 @@ BODY
   margin: 0;
 }
 
-.intro p {
+.intro p,
+.intro_in p {
   font-size: 1.3rem;
   text-align: center;
   margin: 0 auto;
   margin-bottom: 30px;
   margin-top: -15px;
+  z-index: 2 ;
+  }
+
+.intro_in p {
+  border-right: .2rem solid indigo;
+  border-bottom: .2rem solid indigo;
+  border-radius: 20%;
+  padding: 20px;
 }
+
+.intro_in {
+  box-shadow: 5px 10px #888888:
+}
+
 
 .intro img {
   width: 100%;
@@ -674,6 +751,12 @@ iframe ~ p {
   margin: 0 auto;
 }
 
+/*********************************
+BEATS 
+**********************************/
+
+
+
 /*******************************
 MEDIA QUERY - IPAD
 ********************************/
@@ -739,6 +822,10 @@ MEDIA QUERY - LAPTOP
 
   .menu {
     display: none;
+  }
+
+  .index_1 {
+    display: block;
   }
 
   .index_1 li {

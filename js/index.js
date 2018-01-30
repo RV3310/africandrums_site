@@ -104,50 +104,12 @@ function rotate(e){
 
 // click on tab
 
-$(".shakers").click(showHideSK);
-$(".bells").click(showHideBL);
-$(".xylo").click(showHideXY);
-$(".drums").click(showHideDM);
-$(".piano").click(showHideTP);
+$('.js-instrument').on('click', function() {
+  var instrument = $(this).data('instrument');
 
-$(".return").click(hideShow);
-
-function showHideSK() {
-  event.preventDefault();
   $(".instr").hide();
-  $(".box.tl_txt").show();
-}
-
-function showHideDM() {
-  event.preventDefault();
-  $(".instr").hide();
-  $(".box.bl_txt").show();
-}
-
-function showHideXY() {
-  event.preventDefault();
-  $(".instr").hide();
-  $(".box.tc_txt").show();
-}
-
-function showHideBL() {
-  event.preventDefault();
-  $(".instr").hide();
-  $(".box.tr_txt").show();
-}
-
-function showHideTP() {
-  event.preventDefault();
-  $(".instr").hide();
-  $(".box.br_txt").show();
-}
-
-function hideShow() {
-   event.preventDefault();
-  $(".instr").show();
-  $(".box").hide();
-}
-
+  $('.box.' + instrument).show();
+});
 
 
 
@@ -159,6 +121,28 @@ function hideShow() {
 
 
 
+function playSound(e){
+  const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+  
+  const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
+  
+  if(!audio) return; //stop the function from running all together
+  
+  audio.currentTime=0; //allows you to play the key in succession
+  
+  audio.play();
+  key.classList.add('playing');
+  }
+
+  
+  function removeTransition(e){
+    if(e.propertyName !== 'transform') return; //skip it if its not a transform
+    this.classList.remove('playing')
+  }
+  
+  const keys = document.querySelectorAll('.key');
+  keys.forEach(key => key.addEventListener('transitionend', removeTransition));
+  window.addEventListener('keydown', playSound)
 
 
 
