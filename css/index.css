@@ -374,7 +374,9 @@ BODY
   height: 40px;
   width: 70px;
   text-align: center;
-  box-shadow:0 3px 40px rgba(0, 0, 8, 0.3), 0 0 40px rgba(0, 0, 30, 0.1);
+/*  box-shadow:0 3px 40px rgba(0, 0, 8, 0.3), 0 0 40px rgba(0, 0, 30, 0.1);
+*/
+   border-bottom: 1rem solid black;
 }
 
 .flaticon-maracas {
