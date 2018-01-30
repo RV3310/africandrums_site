@@ -72,20 +72,20 @@ GENERAL BODY STLES
     opacity: 0;
   }
   20% {
-    top: 50px;
+    top: 25px;
     opacity: 1;
   }
   40% {
-    top: 100px;
+    top: 50px;
   }
   60% {
-    top: 125px;
+    top: 75px;
   }
   80% {
-    top: 100px;
+    top: 50px;
   }
   100% {
-    top: 125px;
+    top: 100px;
     }
 }
 
@@ -367,7 +367,7 @@ BODY
 
 .fp {
   position: absolute;
-  top: 125px;
+  top: 100px;
   animation: fall;
   animation-duration: 2s;
   animation-iteration-count: 2;
