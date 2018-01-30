@@ -373,17 +373,14 @@ BODY
   animation-iteration-count: 2;
   height: 40px;
   width: 70px;
-  /*text-align: center;
-  box-shadow:0 3px 4px rgba(0, 0, 8, 0.3), 0 0 40px rgba(0, 0, 30, 0.1) inset;
-}*/}
-
-.flaticon-maracas {
-  animation-delay: 0s;
-  color: indigo;
   text-align: center;
   box-shadow:0 3px 4px rgba(0, 0, 8, 0.3), 0 0 40px rgba(0, 0, 30, 0.1) inset;
 }
 
+.flaticon-maracas {
+  animation-delay: 0s;
+  color: indigo;
+}
 
 .flaticon-xylophone {
   animation-delay: 2s;
