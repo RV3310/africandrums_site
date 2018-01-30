@@ -12,11 +12,6 @@ dark cream: #d0a98f*/
 COLORS
 ***********************/
 
-
-
-
-
-
 *, *:before, *:after {
   box-sizing: border-box;
 }
@@ -96,19 +91,13 @@ GENERAL BODY STLES
 
 @keyframes bounce {
   0%, 100%, 20%, 50%, 80% {
-    -webkit-transform: translateY(0);
-    -ms-transform:     translateY(0);
-    transform:         translateY(0)
+    transform: translateY(0)
   }
   40% {
-    -webkit-transform: translateY(-30px);
-    -ms-transform:     translateY(-30px);
-    transform:         translateY(-30px)
+    transform: translateY(-30px)
   }
   60% {
-    -webkit-transform: translateY(-15px);
-    -ms-transform:     translateY(-15px);
-    transform:         translateY(-15px)
+    transform:translateY(-15px)
   }
 }
 /*******************
@@ -205,7 +194,7 @@ nav ul li,
 li  {
   list-style: none;
   display: block;
-  border: 0.0625rem solid black;
+  border: 0.2rem solid indigo;
   padding: .5rem;
   margin: 0.6rem;
 }
@@ -384,14 +373,17 @@ BODY
   animation-iteration-count: 2;
   height: 40px;
   width: 70px;
-  text-align: center;
+  /*text-align: center;
   box-shadow:0 3px 4px rgba(0, 0, 8, 0.3), 0 0 40px rgba(0, 0, 30, 0.1) inset;
-}
+}*/}
 
 .flaticon-maracas {
   animation-delay: 0s;
   color: indigo;
+  text-align: center;
+  box-shadow:0 3px 4px rgba(0, 0, 8, 0.3), 0 0 40px rgba(0, 0, 30, 0.1) inset;
 }
+
 
 .flaticon-xylophone {
   animation-delay: 2s;
