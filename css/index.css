@@ -513,6 +513,7 @@ ARTISTS PAGE
   margin-top: 2%;
   max-height: 210px;
   border-radius: 50%;
+  border-bottom: .6rem solid #cac2b5;
 }
 
 .dbanj img,
