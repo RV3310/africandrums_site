@@ -50,21 +50,21 @@ $(".goback").click(goBack);
 
 // artists
 
-function learnMore() {
-  event.preventDefault();
-  $(this).hide();
-  $(this).next(".moretxt, .learnlater").show();
-}
+// function learnMore() {
+//   event.preventDefault();
+//   $(this).hide();
+//   $(this).next(".moretxt, .learnlater").show();
+// }
 
-function learnLater() {
-  event.preventDefault();
-  $(this).parent().siblings(".learnmore").show();
-  $(this).parent(".moretxt, .learnlater").hide();
+// function learnLater() {
+//   event.preventDefault();
+//   $(this).parent().siblings(".learnmore").show();
+//   $(this).parent(".moretxt, .learnlater").hide();
 
-}
+// }
 
-$(".learnmore").click(learnMore);
-$(".learnlater").click(learnLater);
+// $(".learnmore").click(learnMore);
+// $(".learnlater").click(learnLater);
 
 
 
@@ -118,6 +118,19 @@ $(".return").on("click", function() {
    $('.box.' + instrument).hide();
 })
 
+$('.js-artist').on('click', function() {
+  var artist = $(this).data('artist');
+
+  $('.carousel').hide();
+  $('.moretxt.' + artist).show();
+})
+
+$('.learnlater').on('click', function() {
+  var artist = $(this).data('artist');
+
+  $('.carousel').show();
+  $('.listenlater.' + artist).hide();
+})
 
 
 
