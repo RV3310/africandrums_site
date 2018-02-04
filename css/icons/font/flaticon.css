@@ -26,8 +26,8 @@
   font-family: Flaticon;
         font-size: 20px;
 font-style: normal;
-margin-left: 20px;
-}
+/*margin-left: 20px;
+*/}
 
 .flaticon-maracas:before { content: "\f100"; }
 .flaticon-drum:before { content: "\f101"; }
