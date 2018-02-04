@@ -9,27 +9,8 @@ light cream: #edd4b2
 dark cream: #d0a98f*/
 
 /***********************
-COLORS
+GENERAL STYLING
 ***********************/
-
-
-
-
-
-
-*, *:before, *:after {
-  box-sizing: border-box;
-}
-
-.clearfix:before,
-.clearfix:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
-}
-
-.clearfix:after {
-    clear: both;
-}
 
 .container {
   width: 1000px;
@@ -40,6 +21,7 @@ COLORS
 .images.container {
   margin-left: auto;
   margin-right: auto;
+  top: 75px;
 }
 
 
@@ -47,29 +29,60 @@ COLORS
   display: none;
 }
 
+.active-tab {
+  border: .25rem solid purple;
+  box-shadow:0 3px 10px rgba(0, 0, 50, 0.3), 0 0 40px rgba(20, 0, 130, 0.2) inset;
+
+
+}
+
 /**********************
-GENERAL BODY STLES
+ANIMATIONS
 **********************/
 
 @keyframes shake {
   10%, 90% {
-     transform: translateX(-20px) rotate(5deg);
+     transform: translateX(-30px) translateY(-40px) rotate(5deg);
   }
   
   20%, 80% {
-*/    transform: rotate(0deg);
+   transform: translateX(-30px) translateY(-40px) rotate(0deg);
   }
 
   30%, 50%, 70% {
-     transform: rotate(-5deg);
+     transform: translateX(-30px) translateY(-40px) rotate(-5deg);
 
   }
 
   40%, 60% {
-      transform: rotate(0deg);
+      transform: translateX(-30px) translateY(-50px) rotate(0deg);
 
   }
 }
+
+
+@media (min-width: 600px) {
+  @keyframes shake {
+  10%, 90% {
+     transform: translateX(-30px) translateY(-60px) rotate(5deg);
+  }
+  
+  20%, 80% {
+   transform: translateX(-30px) translateY(-60px) rotate(0deg);
+  }
+
+  30%, 50%, 70% {
+     transform: translateX(-30px) translateY(-60px) rotate(-5deg);
+
+  }
+
+  40%, 60% {
+      transform: translateX(-30px) translateY(-60px) rotate(0deg);
+
+  }
+}
+}
+
 
 @keyframes fall {
   0% {
@@ -208,7 +221,7 @@ nav ul li,
 li  {
   list-style: none;
   display: block;
-  border: 0.0625rem solid black;
+  border: 0.2rem solid indigo;
   padding: .5rem;
   margin: 0.6rem;
 }
@@ -315,9 +328,10 @@ li > p {
 }
 
 
-.links  {
-    margin: .3em;
+.links {
+    padding: .3em;
 }
+
 
 .index_1 a,
 .logo{
@@ -380,6 +394,7 @@ BODY
   padding-right: 50px;
  }
 
+ 
 .fp {
   position: absolute;
   top: 125px;
@@ -389,9 +404,9 @@ BODY
   height: 40px;
   width: 70px;
   text-align: center;
-  box-shadow:0 3px 4px rgba(0, 0, 8, 0.3), 0 0 40px rgba(0, 0, 30, 0.1) inset;
-
-}
+  transform: translateY(-50px);
+/*  box-shadow:0 3px 4px rgba(0, 0, 8, 0.3), 0 0 40px rgba(0, 0, 30, 0.1) inset;
+*/}
 
 .flaticon-maracas {
   animation-delay: 0s;
@@ -400,13 +415,19 @@ BODY
 
 .flaticon-xylophone {
   animation-delay: 2s;
-  color:  #000080;
-}
-
-.flaticon-music-4 {
-  animation-delay: 4s;
   color: #800000;
 }
+
+.flaticon-mbira {
+  animation-delay: 4s;
+  color: #734f96;
+}
+
+.flaticon-chimes{
+  color: indigo;
+  font-weight: 100;
+}
+
 
 .flaticon-drum {
   animation-delay: 6s;
@@ -416,7 +437,17 @@ BODY
 
 .fp::before {
   font-size: 60px;
-  margin: 0;
+  margin: 10px;
+}
+
+.front {
+  margin-bottom: 130px;
+  margin-top: 20px;
+}
+
+.intro_in {
+  position: relative;
+  top: 80px;
 }
 
 .intro p,
@@ -426,6 +457,7 @@ BODY
   margin: 0 auto;
   margin-bottom: 30px;
  }
+
 
 .intro_in p {
   border-right: .2rem solid indigo;
@@ -451,7 +483,7 @@ FOOTER
 
 footer {
   text-align: center;
-  margin: .2rem auto;
+  margin: 1rem auto;
   font-size: 1rem;
   background-color: indigo;
   color: white;
@@ -508,7 +540,6 @@ ARTISTS PAGE
   display: block;
   position: absolute;
   top: 1%;
-  background: #000;
   width: 250px;
   height: 400px;
   text-align: center;
@@ -554,6 +585,35 @@ ARTISTS PAGE
 }
 .kidjo {
   transform: rotateY(270deg) translateZ(250px);
+}
+
+.moretxt {
+  margin: 50px auto 50px;
+  max-width:90%;
+  right: 5%;
+  position: absolute;
+  top: 10%;
+  border-radius: .8em 0 0 .8em;
+  background: #ecdcc9;
+  border: .1em solid #4d243d;
+  box-shadow:0 3px 4px rgba(0, 0, 8, 0.3), 0 0 40px rgba(0, 0, 60, 0.1) inset;
+}
+
+.moretxt p {
+  margin-bottom: 20px;
+  text-align: center;
+  max-width: 90%;
+
+}
+
+.moretxt iframe {
+  display: block;
+  margin: 20px auto;
+  max-width: 90%;
+}
+
+.learnlater {
+  font-size: 1.5rem;
 }
 
 .buttons {
@@ -604,6 +664,15 @@ ARTISTS PAGE
 }
 
 /***************************
+EATS PAGE
+****************************/
+.beats_cont {
+  position: relative;
+  top: 80px;
+
+}
+
+/*****************************
 DRUMS PAGE
 ****************************/
 
@@ -701,7 +770,7 @@ TEXT POSITIONING
 .cent {
     position: absolute;
     top: 35%;
-    left: 35%;
+    left: 40%;
     max-width: 40%;
     margin: 0 auto;
     background-color: white;
@@ -724,7 +793,6 @@ TEXT POSITIONING
     margin: auto;
 }
 
-/* Bottom right text */
 .br {
     position: absolute;
     bottom: 5%;
@@ -737,7 +805,6 @@ TEXT POSITIONING
     position: absolute;
     left: 50%;
     top: 0;
-    color: indigo;
     max-height: 20px;
     max-width: 20px;
     transform: translateX(-50%);
@@ -746,11 +813,26 @@ TEXT POSITIONING
     animation-iteration-count: 3;
 }
 
+ .icon {
+  transform: translate3d(-30px,-40px,0);
+
+ }
+
 .icon::before {
   font-size: 2.5rem;
   margin: 0;
 }
 
+iframe {
+  max-width: 300px;
+  max-height: 215px; 
+  border-top: .2rem solid #cac2b5;
+  border-left: .2rem solid #cac2b5;
+  border-bottom: .2rem solid indigo;
+  border-right: .2rem solid indigo;
+  border-radius: 10px;
+
+}
 
 
 iframe ~ p {
@@ -762,7 +844,63 @@ iframe ~ p {
 BEATS 
 **********************************/
 
+.keys {
+  display: flex;
+  justify-content: space-around;
+  align-content: flex-start;
+  width: 90%;
+  max-height: 20%;
+}
 
+.key {
+  border: .3rem solid purple;
+  border-radius: .8rem;
+  margin: 1rem;
+  font-size: .3rem;
+  padding: .8rem .5rem;
+  text-align: center;
+  color: #000;
+  background: transparent;
+  width: 33.3%;
+  max-height: 20%;
+}
+
+.f-icon {
+  width: 100%;
+}
+
+.playing {
+  transform: scale(1.2);
+  border-color: #7adcff;
+  box-shadow: 0 0 1rem #7adcff;
+  background: rgba(255,255,255,0.05);
+}
+
+.playing .sound {
+  color: pink;
+}
+
+kbd {
+  display: block;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.sound {
+  font-size: 1.2rem;
+  color: purple;
+}
+
+/**********************************
+Very Small Screens
+***********************************/
+
+@media  (max-width: 350px) { 
+
+body {
+  overflow-y: scroll; 
+}
+}
 
 /*******************************
 MEDIA QUERY - IPAD
@@ -794,6 +932,9 @@ MEDIA QUERY - IPAD
     max-width: 600px;
   }
 
+.main_cont {
+  margin-top: 40px;
+}
   .intro  p {
   margin: 15px auto 30px;
 }
@@ -807,18 +948,15 @@ MEDIA QUERY - IPAD
   font-size: 60px;
 }
 
-iframe {
-  max-width: 300px;
-  max-height: 215px; 
-  border-top: .2rem solid #cac2b5;
-  border-left: .2rem solid #cac2b5;
-  border-bottom: .2rem solid indigo;
-  border-right: .2rem solid indigo;
-  border-radius: 10px;
-
-
+.descrip a {
+  font-size: 1.5rem;
 }
-  
+
+ .icon {
+  transform: translate3d(-30px,-60px,0);
+
+ }
+
 }
 
 /********************************

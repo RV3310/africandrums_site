@@ -4,12 +4,6 @@ $(document).ready(function() {
 // variables
 var ww = $(window).width();
 
-	// Responsive Nav Bar
-
-// $(".fa").on("click", function() { 
-// 	event.preventDefault(); 
-// 	$("nav").toggle(); 
-// });
 
 $(window).resize(function() { 
 	if ($(window).width() < 880) { 
@@ -47,25 +41,6 @@ $(".goforward").click(learnMore);
 $(".goback").click(goBack);
 
 });
-
-// artists
-
-// function learnMore() {
-//   event.preventDefault();
-//   $(this).hide();
-//   $(this).next(".moretxt, .learnlater").show();
-// }
-
-// function learnLater() {
-//   event.preventDefault();
-//   $(this).parent().siblings(".learnmore").show();
-//   $(this).parent(".moretxt, .learnlater").hide();
-
-// }
-
-// $(".learnmore").click(learnMore);
-// $(".learnlater").click(learnLater);
-
 
 
 // ARTISTIS PAGE
@@ -122,6 +97,7 @@ $('.js-artist').on('click', function() {
   var artist = $(this).data('artist');
 
   $('.carousel').hide();
+  $('.buttons').hide();
   $('.moretxt.' + artist).show();
 })
 
@@ -129,36 +105,45 @@ $('.learnlater').on('click', function() {
   var artist = $(this).data('artist');
 
   $('.carousel').show();
-  $('.listenlater.' + artist).hide();
+  $('.buttons').show();
+  $('.moretxt.' + artist).hide();
 })
 
 
+/*************************************
+BEATS
+*************************************/
 
-// hide instr
-// show paragraph
+// Listen for keydown/click event and start playSound() for the rigth divc
+$(window).keydown(playSound);
+// $(div).click(playSound);
+// Listen for the keyup event and removeClass() of playing for the currently pressed key
+$(window).keyup(stopPlay);
 
-// SLIDE ANIMATION
+function playSound(e) {
+ // find key/click event by data-key attribute
+  var key = $(div).data('key');
+//  find corresponding audio by data key
+  var audio = $(audio).data('key');
+// if key pressed has no data-key attribute don't do anything
+  if (!audio) {
+    return; 
+  }
+ // add .playing class to key with correct data-key attribute
+  key.addClass('playing'); 
+ // start the currently selected audio from the beginning
+  audio.currentTime = 0; 
+  // play the correct sound 
+  audio.play(); 
+}
 
-
-
-// // When box is clicked on add "is_active" class
-
-// //check which boxes are active
-
-// //get bpm
-
-// //play every 60s/bpm 
-
-
-
-// // CONTROLS
-
-// // slider
-
-// var slider = document.getElementById("bpm");
-// var output = document.getElementById("bpm_v");
-// output.innerHTML = slider.value;
-
-// slider.oninput = function() {
-//   output.innerHTML = this.value;
-// }
+function stopPlay(e) {
+   // find released key by data-key
+  var key = $(div).data("key"); 
+  // if released key has no data-key attribute don't do anything
+  if (!key) {
+    return; 
+  }
+ // remove .playing class from correct released key 
+  key.removeClass('playing'); 
+}

@@ -1,6 +1,6 @@
 	/*
   	Flaticon icon font: Flaticon
-  	Creation date: 04/02/2018 10:10
+  	Creation date: 04/02/2018 09:53
   	*/
 
 @font-face {
@@ -29,8 +29,5 @@ font-style: normal;
 margin-left: 20px;
 }
 
-.flaticon-maracas:before { content: "\f100"; }
-.flaticon-drum:before { content: "\f101"; }
-.flaticon-xylophone:before { content: "\f102"; }
-.flaticon-mbira:before { content: "\f103"; }
-.flaticon-chimes:before { content: "\f104"; }
+.flaticon-mbira:before { content: "\f100"; }
+.flaticon-chimes:before { content: "\f101"; }
